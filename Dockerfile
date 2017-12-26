@@ -10,7 +10,7 @@ ENV PERL_MM_USE_DEFAULT 1
 
 RUN buildDeps='build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev python-pip python-dev' && \
         apt-get update && \
-	apt-get -y install sudo curl wget faad flac lame sox libio-socket-ssl-perl libpython2.7 libfreetype6 libfont-freetype-perl $buildDeps && \
+	apt-get -y install sudo curl wget faad flac lame sox libio-socket-ssl-perl libpython2.7 libfreetype6 libfont-freetype-perl libcrypt-openssl-rsa-perl libio-socket-inet6-perl libwww-perl avahi-utils libio-socket-ssl-perl $buildDeps && \
 	MEDIAFILE=`curl -Lsf -o - "${BASESERVER_URL}${RELEASE}" | grep _arm.deb | sed -e '$!d' -e 's/.*href="//' -e 's/".*//'` && \
 	MEDIASERVER_URL="${BASESERVER_URL}${MEDIAFILE}" && \
 	curl -Lsf -o /tmp/logitechmediaserver.deb $MEDIASERVER_URL && \
