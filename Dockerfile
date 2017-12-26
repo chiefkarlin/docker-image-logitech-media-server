@@ -8,7 +8,7 @@ ENV BASESERVER_URL=http://downloads.slimdevices.com/nightly/
 ENV RELEASE=?ver=7.9
 ENV PERL_MM_USE_DEFAULT 1
 
-RUN buildDeps='build-essential libssl-dev libffi-dev python-pip python-dev' && \
+RUN buildDeps='build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev python-pip python-dev' && \
         apt-get update && \
 	apt-get -y install sudo curl wget faad flac lame sox libio-socket-ssl-perl libpython2.7 libfreetype6 libfont-freetype-perl $buildDeps && \
 	MEDIAFILE=`curl -Lsf -o - "${BASESERVER_URL}${RELEASE}" | grep _arm.deb | sed -e '$!d' -e 's/.*href="//' -e 's/".*//'` && \
