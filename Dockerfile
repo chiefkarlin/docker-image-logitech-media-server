@@ -1,5 +1,5 @@
-FROM ubuntu:xenial
-MAINTAINER Josh Lukens <jlukens@botch.com>
+FROM debian:jessie-slim
+MAINTAINER Rob Vogelbacher rob.vogelbacher@gmail.com
 
 ENV SQUEEZE_VOL /srv/squeezebox
 ENV LANG C.UTF-8
