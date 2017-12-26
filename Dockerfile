@@ -5,7 +5,7 @@ ENV SQUEEZE_VOL /srv/squeezebox
 ENV LANG C.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
 ENV BASESERVER_URL=http://downloads.slimdevices.com/nightly/
-ENV RELEASE=ver=7.9
+ENV RELEASE=?ver=7.9
 ENV PERL_MM_USE_DEFAULT 1
 
 RUN buildDeps='build-essential libssl-dev libffi-dev python-pip python-dev' && \
